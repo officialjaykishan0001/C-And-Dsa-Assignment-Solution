@@ -12,8 +12,12 @@
 */
 #include <iostream>
 using namespace std;
-int maximum = 11;
 
+// Global Variebles 
+int maximum = 11;
+int last_prime = 1;
+
+// Function for checking, Whether the Number is prime or not ?
 bool isPrime(int x)
 {
     for (int i = 2; i * i <= x; i++)
@@ -25,8 +29,8 @@ bool isPrime(int x)
     }
     return true;
 }
-int last_prime = 1;
 
+// Function for generating the prime Number(always generates the next prime number )
 int generate_Prime_No()
 {
     int next_prime_Number = last_prime + 1;
@@ -37,19 +41,25 @@ int generate_Prime_No()
     last_prime = next_prime_Number;
     return last_prime;
 }
+
+
 int main()
 {
+    // Fetching User Input
     int n;
     cout << "Enter the value of N : ";
     cin >> n;
 
+    // Logic for printing the Given pattern
     for (int i = 0; i < n; i++)
     {
+        // Prints spaces for each row
         for (int j = 0; j < (n - 1 - i); j++)
         {
             cout << " ";
         }
-        // k < (2 * i + 1)
+        
+        // Prints prime numbers for each rows
         for (int k = 0; k <= (i); k++)
         {
             cout << generate_Prime_No() << " ";
