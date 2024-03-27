@@ -2,6 +2,8 @@
 // took, if path[i] = ‘0’ then the person moved one step left, and if path[i] = ‘1’ then the person moved one step
 // to the right. The task is to find the count of distinct positions the person visited.
 
+
+// header files
 #include <iostream>
 #include <list>
 #include <vector>
